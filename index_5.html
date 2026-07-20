@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>MOVE Dance Academy - Reporte Clase de Prueba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pruebas.css" />
+</head>
+<body>
+
+<div class="floating floating1"></div>
+<div class="floating floating2"></div>
+<div class="floating floating3"></div>
+<div class="floating floating4"></div>
+
+<div class="container">
+
+  <img src="logo.png" alt="MOVE Dance Academy" class="logo" />
+  <div class="title">Reporte de Clase de Prueba</div>
+
+  <!-- ============ PANTALLA 0: CARGANDO ============ -->
+  <section id="pantallaCargando" class="pantalla">
+    <p class="loading-text">✨ Cargando información...</p>
+  </section>
+
+  <!-- ============ PANTALLA 1: MAESTRA ============ -->
+  <section id="pantallaMaestra" class="pantalla" hidden>
+    <p class="subtitulo">👩‍🏫 ¿Quién va a reportar hoy?</p>
+    <div id="listaMaestras" class="lista-botones"></div>
+  </section>
+
+  <!-- ============ PANTALLA 2: LISTA DE PRUEBAS PENDIENTES ============ -->
+  <section id="pantallaLista" class="pantalla" hidden>
+    <p class="saludo-maestra" id="saludoMaestra"></p>
+    <p class="subtitulo">🩰 Clases de prueba pendientes de reporte</p>
+    <div id="listaPruebas" class="lista-pruebas"></div>
+    <p class="vacio-texto" id="textoVacio" hidden>🎉 No hay clases de prueba pendientes de reporte.</p>
+    <button class="btn-secundario" id="btnCambiarMaestra" style="width:100%;margin-top:16px;">← Cambiar de maestra</button>
+  </section>
+
+  <!-- ============ PANTALLA 3: FORMULARIO DE REPORTE ============ -->
+  <section id="pantallaFormulario" class="pantalla" hidden>
+    <div class="ficha-alumna">
+      <p class="ficha-nombre" id="fichaNombre"></p>
+      <p class="ficha-detalle" id="fichaDetalle"></p>
+    </div>
+
+    <label class="campo-label">⭐ Participación</label>
+    <select id="selectParticipacion" class="select-move">
+      <option value="">Selecciona...</option>
+      <option value="EXCELENTE">Excelente</option>
+      <option value="BUENA">Buena</option>
+      <option value="TIMIDA">Tímida</option>
+      <option value="REGULAR">Regular</option>
+      <option value="NECESITA APOYO">Necesita apoyo</option>
+    </select>
+
+    <label class="campo-label">🤝 Integración con el grupo</label>
+    <select id="selectIntegracion" class="select-move">
+      <option value="">Selecciona...</option>
+      <option value="EXCELENTE">Excelente</option>
+      <option value="BUENA">Buena</option>
+      <option value="SE ADAPTARA CON UN POCO DE TIEMPO">Se adaptará con un poco de tiempo</option>
+      <option value="NECESITA APOYO">Necesita apoyo</option>
+    </select>
+
+    <label class="campo-label">😊 Disfrutó la clase</label>
+    <select id="selectDisfruto" class="select-move">
+      <option value="">Selecciona...</option>
+      <option value="MUCHISIMO">Muchísimo</option>
+      <option value="SI">Sí</option>
+      <option value="MAS O MENOS">Más o menos</option>
+      <option value="POCO">Poco</option>
+      <option value="NO">No</option>
+    </select>
+
+    <label class="campo-label">🎯 Recomendación de la maestra</label>
+    <select id="selectRecomendacion" class="select-move">
+      <option value="">Selecciona...</option>
+      <option value="RECOMIENDO INSCRIPCION">Recomiendo inscripción</option>
+      <option value="RECOMIENDO OTRO NIVEL">Recomiendo otro nivel</option>
+      <option value="RECOMIENDO OTRA CLASE">Recomiendo otra clase</option>
+    </select>
+
+    <label class="campo-label">📝 Comentarios para la familia</label>
+    <textarea id="textoComentariosFamilia" class="textarea-move" rows="3" placeholder="Este mensaje se enviará a la mamá por WhatsApp..."></textarea>
+
+    <label class="campo-label">🔒 Comentarios internos (no se envían)</label>
+    <textarea id="textoComentariosInternos" class="textarea-move" rows="2" placeholder="Solo para uso interno de la academia..."></textarea>
+
+    <div class="nav-botones">
+      <button class="btn-secundario" id="btnAtrasFormulario">← Atrás</button>
+      <button class="btn-grande btn-siguiente" id="btnEnviarReporte">Enviar reporte a la mamá →</button>
+    </div>
+  </section>
+
+  <!-- ============ PANTALLA 4: LISTO ============ -->
+  <section id="pantallaListo" class="pantalla" hidden>
+    <p class="ficha-nombre">✅ ¡Reporte enviado!</p>
+    <p class="message" id="mensajeFinal">El reporte se envió por WhatsApp a la mamá.</p>
+    <button class="btn-grande btn-siguiente" id="btnOtraPrueba">Reportar otra clase de prueba</button>
+  </section>
+
+  <p class="mensaje-error" id="mensajeError"></p>
+
+</div>
+
+<script src="pruebas.js"></script>
+</body>
+</html>
