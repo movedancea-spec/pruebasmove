@@ -6,7 +6,8 @@
 // El Worker es el único lugar donde vive la clave de Airtable y
 // la clave de Green API (WhatsApp); nunca están en este archivo.
 
-const WORKER_URL = "https://pruebasmove.movedancea.workers.dev";
+const WORKER_URL = "https://pruebasmove.movedancea.workers.dev
+";
 
 // ---------- estado ----------
 let maestras = [];
