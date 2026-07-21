@@ -86,7 +86,7 @@ async function cargarPendientes() {
   try {
     const datos = await llamarWorker({
       accion: "pendientes",
-      maestraId: maestraSeleccionada.id,
+      maestraNombre: maestraSeleccionada.nombre,
     });
     pruebasPendientes = datos.pruebas || [];
     renderPendientes();
